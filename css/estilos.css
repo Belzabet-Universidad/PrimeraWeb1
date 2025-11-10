@@ -93,7 +93,6 @@ body {
   background-color: #b47b7b; /* Tono más oscuro para el activo */
 }
 
-
 /* =======================================================
    SECCIÓN 2 - CONTENIDO PRINCIPAL (Index)
 ======================================================= */
@@ -183,6 +182,24 @@ body {
   transition: transform 0.4s ease, filter 0.4s ease, opacity 0.4s ease;
 }
 
+/* =======================================================
+   IMÁGENES ADAPTATIVAS EN PRODUCTOS (figure)
+======================================================= */
+.contenido-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.contenido-img figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 0.5em;
+}
+
 .img-adaptativa picture img:hover {
   transform: scale(1.05);
   filter: brightness(1.05) contrast(1.1);
@@ -248,9 +265,9 @@ body {
 }
 
 /* =======================================================
-   TABLAS (Productos)
+   TABLAS (Servicios)
 ======================================================= */
-.tabla-productos {
+.tabla-servicios {
   width: 90%;
   border-collapse: collapse;
   margin: 2em auto;
@@ -260,18 +277,32 @@ body {
   overflow: hidden;
 }
 
-.tabla-productos th {
+.tabla-servicios h2 {
+  color: var(--color-primario);
+  margin-bottom: 0.8em;
+  text-transform: uppercase;
+}
+
+.tabla-servicios table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+
+.tabla-servicios th,
+.tabla-servicios td {
+  border: 1px solid #ccc;
+  padding: 0.8em;
+  text-align: left;
+}
+
+.tabla-servicios th {
   background-color: var(--color-primario);
   color: #fff;
-  padding: 0.8em;
+  text-transform: uppercase;
 }
 
-.tabla-productos td {
-  border: 1px solid #ddd;
-  padding: 0.7em;
-}
-
-.tabla-productos tr:nth-child(even) {
+.tabla-servicios tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
@@ -486,12 +517,25 @@ body {
   }
 
   .s2-contenido {
+    display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
   .contenido-img img {
     width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .contenido-texto {
+    width: 90%;
+    margin: 1em auto;
+    text-align: center;
   }
 
   .producto-info h2 {
